@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CountriesModule } from './countries/countries.module';
+import {MapModule} from './map/map.module';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { CountriesModule } from './countries/countries.module';
     BrowserAnimationsModule,
 
     CountriesModule,
+    MapModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

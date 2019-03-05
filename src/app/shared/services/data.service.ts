@@ -43,4 +43,14 @@ export class DataService {
     });
     return result;
   }
+
+  handlerChecked(continents: ContinentModel, status: boolean): void {
+    continents.country.forEach((item: CountryModel) => {
+      item.checked = status;
+    });
+  }
+
+  isAllChecked(continents: ContinentModel): boolean {
+    return continents.country.every((country: CountryModel) => country.checked);
+  }
 }

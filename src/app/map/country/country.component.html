@@ -1,0 +1,9 @@
+<mat-card>
+  <mat-checkbox class="example-margin"
+                (ngModelChange)="onChange($event)"
+                [ngModel]="country.checked"
+  >
+    {{country?.countryName}}
+  </mat-checkbox>
+
+</mat-card>
