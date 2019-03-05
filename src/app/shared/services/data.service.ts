@@ -2,8 +2,8 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
-import { CountryModel } from './country.model';
-import { ContinentModel } from './continent.model';
+import { CountryModel } from '../models/country.model';
+import { ContinentModel } from '../models/continent.model';
 
 @Injectable({
   providedIn: 'root'
