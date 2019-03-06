@@ -1,0 +1,28 @@
+.selected {
+
+  &-wrap {
+    display: flex;
+    align-items: center;
+  }
+
+  &-text {
+    font-weight: bold;
+    color: #000000;
+    letter-spacing: 0.5px;
+    padding-right: 10px;
+  }
+
+  &-label {
+    color: orange;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+  }
+
+  &-action {
+    padding: 0 10px;
+
+    &:last-child {
+      border-left: 1px solid gray;
+    }
+  }
+}

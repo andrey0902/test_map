@@ -1,0 +1,23 @@
+.wrap {
+  padding: 10px;
+}
+
+.map {
+
+  &-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &-text {
+    font-weight: bold;
+    color: #000000;
+    letter-spacing: 0.5px;
+  }
+
+  &-selected {
+    font-weight: bold;
+    color: #797979;
+  }
+}

@@ -44,6 +44,11 @@ export class DataService {
     return result;
   }
 
+  continentUpdate(continents: ContinentModel, status: boolean): void {
+    continents.checked = status;
+    this.handlerChecked(continents, status);
+  }
+
   handlerChecked(continents: ContinentModel, status: boolean): void {
     continents.country.forEach((item: CountryModel) => {
       item.checked = status;
@@ -53,4 +58,43 @@ export class DataService {
   isAllChecked(continents: ContinentModel): boolean {
     return continents.country.every((country: CountryModel) => country.checked);
   }
+
+  isNoChecked(continents: ContinentModel): boolean {
+    return continents.country.every((country: CountryModel) => !country.checked);
+  }
+  checkAll(continents: ContinentModel[]): boolean {
+    return continents.every(item => item.checked);
+  }
+
+  checkSome(continents: ContinentModel[]): boolean {
+    return continents.some(item => !item.checked);
+  }
+
+  countTotalCountries(continents: ContinentModel[]): number {
+    let total = 0;
+    if (continents) {
+      continents.forEach((item) => {
+        total += item.country.length ;
+      });
+      return total;
+    }
+    return total;
+  }
+
+  countSelectedCountries(continents: ContinentModel[]): number {
+    let total = 0;
+    continents.forEach((continent) => {
+      if (continent.checked) {
+        total += continent.country.length;
+      } else {
+        continent.country.forEach((item) => {
+          if (item.checked) {
+            total++;
+          }
+        });
+      }
+    });
+    return total;
+  }
+
 }

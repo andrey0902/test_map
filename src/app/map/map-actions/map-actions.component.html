@@ -1,0 +1,29 @@
+<div class="selected-wrap">
+  <p class="selected-text">
+    Selected:
+  </p>
+
+  <div class="selected-action">
+    <mat-checkbox class="example-margin"
+                  (ngModelChange)="allSelected($event)"
+                  [ngModel]="isSelectedAll"
+                  [labelPosition]="'before'"
+    >
+      <span class="selected-label">
+        All
+      </span>
+    </mat-checkbox>
+  </div>
+  <div class="selected-action">
+    <mat-checkbox class="example-margin"
+                  (ngModelChange)="onSelected($event)"
+                  [ngModel]="isSelectedNo"
+                  [labelPosition]="'before'"
+    >
+      <span class="selected-label">
+        None
+      </span>
+    </mat-checkbox>
+  </div>
+
+</div>

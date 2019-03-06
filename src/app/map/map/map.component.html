@@ -1,8 +1,20 @@
-
-
-<div class="continent-wrap">
-  <app-continent *ngFor="let continent of continents$ | async"
-                 [continent]="continent"
-  >
-  </app-continent>
+<div class="wrap-map" >
+  <div class="map-header">
+    <app-selected-country [continents]="continents"></app-selected-country>
+  </div>
+  <div class="continent-wrap">
+    <perfect-scrollbar style="max-height: 80vh">
+      <app-continent *ngFor="let continent of continents"
+                     [continent]="continent"
+                     (onSelect)="updateActionsComponent($event)"
+      >
+      </app-continent>
+    </perfect-scrollbar>
+  </div>
 </div>
+
+
+<div class="load" *ngIf="load">
+  <mat-spinner></mat-spinner>
+</div>
+

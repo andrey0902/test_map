@@ -5,6 +5,7 @@ export class ContinentModel {
   index: string;
   country: CountryModel[];
   checked = false;
+  notCheckedSome = false;
 
   constructor(data) {
     this.name = data.name;
